@@ -10,7 +10,7 @@ class BinarySearch {
 		int target_index = -1;
 
 		while (start <= end) {
-			mid = (start + end) / 2;
+			mid = start + (end - start)/2;
 			if (target == numbers[mid]) {
 				target_index = mid;
 				break;
