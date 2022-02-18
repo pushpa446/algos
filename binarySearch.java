@@ -6,7 +6,7 @@ class BinarySearch {
 
 		int start = 0;
 		int end = numbers.length - 1;
-		int mid = 0;
+		int mid;
 		int target_index = -1;
 
 		while (start <= end) {
