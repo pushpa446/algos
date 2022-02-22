@@ -12,7 +12,7 @@ class RotateArray {
         /*
         say there is numbers with length 5, and k is 12,
         if we rotate the array 5 times the resultant array is original array
-        so we don't need to rotate array 12 times, we can eliminate multiples of 5
+        so, we don't need to rotate array 12 times, we can eliminate multiples of 5
         this is equivalent to rotating the array 2 times
         remainder of 12/5
         */
