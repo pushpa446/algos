@@ -7,17 +7,16 @@ public class ValidPalindrome {
 
         public static boolean isPalindrome(String s) {
                 int left = 0, right = Math.max(s.length() - 1, 0);
-                String s1 = s.toLowerCase();
-                while (left != right) {
-                        if (!Character.isLetterOrDigit(s1.charAt(left))) {
+                while (left < right) {
+                        if (!Character.isLetterOrDigit(s.charAt(left))) {
                                 left += 1;
                                 continue;
                         }
-                        if (!Character.isLetterOrDigit(s1.charAt(right))) {
+                        if (!Character.isLetterOrDigit(s.charAt(right))) {
                                 right -= 1;
                                 continue;
                         }
-                        if (s1.charAt(left) != s1.charAt(right)) {
+                        if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
                                 return false;
                         }
                         left += 1;
