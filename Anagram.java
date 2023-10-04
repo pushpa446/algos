@@ -20,19 +20,12 @@ public class Anagram {
                 Map<Character, Integer> tCount = new HashMap<>();
                 for (int i = 0; i < s.length(); i++) {
                         char key = s.charAt(i);
-                        if (sCount.containsKey(key)) {
-                                int count = sCount.get(key) + 1;
-                                sCount.put(key, count);
-                        } else {
-                                sCount.put(key, 1);
-                        }
+                        int count = sCount.containsKey(key) ? sCount.get(key) + 1 : 1;
+                        sCount.put(key, count);
+
                         key = t.charAt(i);
-                        if (tCount.containsKey(key)) {
-                                int count = tCount.get(key) + 1;
-                                tCount.put(key, count);
-                        } else {
-                                tCount.put(key, 1);
-                        }
+                        count = tCount.containsKey(key) ? tCount.get(key) + 1 : 1;
+                        tCount.put(key, count);
                 }
                 for (Character key : sCount.keySet()) {
                         if (!tCount.containsKey(key) || !sCount.get(key).equals(tCount.get(key))) {
